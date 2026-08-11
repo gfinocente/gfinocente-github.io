@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Guilherme Franco Inocente | Ciência, Dados e IA</title>
+    <title>Guilherme Franco Inocente | Pesquisa, Dados & Modelagem</title>
 
-    <meta name="description" content="Portfólio de Guilherme Franco Inocente — Física, Biofísica, modelagem computacional, ciência de dados, inteligência artificial e educação.">
+    <meta name="description"
+          content="Portfólio profissional de Guilherme Franco Inocente — Doutor em Biofísica, pesquisador quantitativo com experiência em modelagem computacional, análise de dados, Python, Power BI e pesquisa aplicada.">
 
     <style>
-
-        /* =========================================================
-           CONFIGURAÇÕES GERAIS
-        ========================================================= */
-
         * {
             margin: 0;
             padding: 0;
@@ -27,12 +23,13 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                          Roboto, Helvetica, Arial, sans-serif;
-            background: #f8fafc;
-            color: #1e293b;
-            line-height: 1.7;
+            background: #f7f9fc;
+            color: #1f2937;
+            line-height: 1.6;
         }
 
         a {
+            color: inherit;
             text-decoration: none;
         }
 
@@ -41,469 +38,567 @@
             margin: 0 auto;
         }
 
+        /* =========================
+           HEADER
+        ========================= */
 
-        /* =========================================================
-           NAVEGAÇÃO
-        ========================================================= */
-
-        nav {
+        header {
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid #e5e7eb;
             position: sticky;
             top: 0;
-            z-index: 1000;
-
-            background: rgba(255,255,255,0.96);
+            z-index: 100;
             backdrop-filter: blur(10px);
-
-            border-bottom: 1px solid #e2e8f0;
         }
 
-        .nav-content {
+        nav {
             min-height: 68px;
-
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 20px;
         }
 
         .logo {
-            font-size: 19px;
+            font-size: 1.05rem;
             font-weight: 700;
-            color: #0f172a;
+            color: #111827;
         }
 
         .nav-links {
             display: flex;
-            gap: 28px;
+            gap: 26px;
             list-style: none;
-        }
-
-        .nav-links a {
-            color: #475569;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.2s;
+            font-size: 0.92rem;
+            color: #4b5563;
         }
 
         .nav-links a:hover {
             color: #2563eb;
         }
 
-
-        /* =========================================================
+        /* =========================
            HERO
-        ========================================================= */
+        ========================= */
 
         .hero {
+            padding: 105px 0 90px;
             background:
-                radial-gradient(circle at 80% 20%, rgba(37,99,235,0.12), transparent 30%),
-                linear-gradient(135deg, #0f172a, #172554);
-
-            color: white;
-            padding: 110px 0 105px;
+                radial-gradient(circle at top right, #e8f0ff 0%, transparent 35%),
+                linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
         }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.4fr 0.6fr;
+            grid-template-columns: 1.5fr 0.8fr;
             gap: 70px;
             align-items: center;
         }
 
         .eyebrow {
             display: inline-block;
-
-            padding: 7px 14px;
-            margin-bottom: 22px;
-
-            border: 1px solid rgba(255,255,255,0.25);
-            border-radius: 30px;
-
-            color: #bfdbfe;
-            font-size: 13px;
+            margin-bottom: 18px;
+            padding: 7px 13px;
+            border-radius: 20px;
+            background: #eaf2ff;
+            color: #2457a6;
+            font-size: 0.82rem;
             font-weight: 700;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.03em;
         }
 
         .hero h1 {
-            font-size: clamp(42px, 6vw, 68px);
+            font-size: clamp(2.6rem, 6vw, 4.6rem);
             line-height: 1.05;
-            letter-spacing: -2px;
-            margin-bottom: 22px;
+            letter-spacing: -0.045em;
+            color: #111827;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
         }
 
         .hero h2 {
-            font-size: clamp(21px, 3vw, 30px);
-            line-height: 1.3;
+            font-size: clamp(1.2rem, 2vw, 1.55rem);
             font-weight: 500;
-            color: #dbeafe;
-            margin-bottom: 25px;
+            color: #374151;
+            max-width: 760px;
+            margin-bottom: 22px;
         }
 
         .hero-description {
-            max-width: 760px;
-            color: #cbd5e1;
-            font-size: 18px;
-            line-height: 1.8;
+            max-width: 730px;
+            font-size: 1.08rem;
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+
+        .keywords {
+            font-size: 0.95rem;
+            color: #4b5563;
+            font-weight: 600;
+            margin-bottom: 32px;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 14px;
             flex-wrap: wrap;
-            margin-top: 35px;
+            gap: 12px;
         }
 
-        .button {
-            display: inline-block;
-            padding: 12px 20px;
-
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 19px;
             border-radius: 8px;
-
-            font-size: 14px;
             font-weight: 700;
-
-            transition: 0.2s;
+            font-size: 0.92rem;
+            transition: 0.2s ease;
         }
 
-        .button-primary {
+        .btn-primary {
             background: #2563eb;
             color: white;
         }
 
-        .button-primary:hover {
+        .btn-primary:hover {
             background: #1d4ed8;
-            transform: translateY(-2px);
+            transform: translateY(-1px);
         }
 
-        .button-secondary {
-            border: 1px solid rgba(255,255,255,0.3);
-            color: white;
+        .btn-secondary {
+            border: 1px solid #d1d5db;
+            background: white;
+            color: #374151;
         }
 
-        .button-secondary:hover {
-            background: rgba(255,255,255,0.08);
+        .btn-secondary:hover {
+            border-color: #2563eb;
+            color: #2563eb;
         }
 
-        .hero-side {
-            border-left: 1px solid rgba(255,255,255,0.18);
-            padding-left: 35px;
+        .hero-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 15px 40px rgba(15, 23, 42, 0.07);
         }
 
-        .hero-side p {
-            color: #cbd5e1;
-            font-size: 14px;
+        .hero-card-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #6b7280;
+            font-weight: 700;
             margin-bottom: 18px;
         }
 
-        .hero-side strong {
-            display: block;
-            color: white;
-            font-size: 17px;
-            margin-bottom: 4px;
+        .hero-card ul {
+            list-style: none;
         }
 
+        .hero-card li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eef0f3;
+            font-weight: 600;
+        }
 
-        /* =========================================================
-           SEÇÕES
-        ========================================================= */
+        .hero-card li:last-child {
+            border-bottom: none;
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
 
         section {
             padding: 85px 0;
         }
 
-        .section-label {
-            color: #2563eb;
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-
-        section h2 {
-            font-size: clamp(30px, 4vw, 42px);
-            line-height: 1.2;
-            color: #0f172a;
-            margin-bottom: 18px;
-        }
-
-        .section-intro {
-            max-width: 800px;
-            color: #64748b;
-            font-size: 17px;
+        .section-header {
+            max-width: 760px;
             margin-bottom: 45px;
         }
 
+        .section-label {
+            color: #2563eb;
+            text-transform: uppercase;
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
 
-        /* =========================================================
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            line-height: 1.15;
+            color: #111827;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: #6b7280;
+            font-size: 1.02rem;
+        }
+
+        /* =========================
            SOBRE
-        ========================================================= */
+        ========================= */
+
+        .about {
+            background: white;
+        }
 
         .about-grid {
             display: grid;
-            grid-template-columns: 1.3fr 0.7fr;
+            grid-template-columns: 1.2fr 0.8fr;
             gap: 60px;
-            align-items: start;
         }
 
         .about-text p {
-            margin-bottom: 20px;
-            color: #475569;
-            font-size: 17px;
+            margin-bottom: 18px;
+            color: #4b5563;
+            font-size: 1.02rem;
         }
 
         .about-highlight {
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 14px;
-            padding: 30px;
-
-            box-shadow: 0 8px 30px rgba(15,23,42,0.05);
+            border-left: 4px solid #2563eb;
+            padding: 22px 25px;
+            background: #f7f9fc;
+            border-radius: 0 10px 10px 0;
+            color: #374151;
+            font-weight: 600;
         }
 
-        .about-highlight h3 {
-            color: #0f172a;
-            margin-bottom: 20px;
+        .education-list {
+            list-style: none;
         }
 
-        .timeline-item {
-            padding-left: 18px;
-            border-left: 3px solid #dbeafe;
-            margin-bottom: 22px;
+        .education-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid #e5e7eb;
         }
 
-        .timeline-item strong {
+        .education-list strong {
             display: block;
-            color: #0f172a;
+            color: #111827;
         }
 
-        .timeline-item span {
-            color: #64748b;
-            font-size: 14px;
+        .education-list span {
+            color: #6b7280;
+            font-size: 0.92rem;
         }
 
+        /* =========================
+           O QUE FAÇO
+        ========================= */
 
-        /* =========================================================
-           COMPETÊNCIAS
-        ========================================================= */
+        .capabilities {
+            background: #f7f9fc;
+        }
 
-        .skills-grid {
+        .capability-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 18px;
         }
 
-        .skill-card {
+        .capability {
             background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 25px;
-
-            transition: 0.2s;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 27px;
+            transition: 0.2s ease;
         }
 
-        .skill-card:hover {
+        .capability:hover {
             transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
         }
 
-        .skill-card h3 {
-            font-size: 17px;
-            margin-bottom: 10px;
-            color: #0f172a;
+        .capability-number {
+            font-size: 0.78rem;
+            color: #2563eb;
+            font-weight: 800;
+            margin-bottom: 17px;
         }
 
-        .skill-card p {
-            color: #64748b;
-            font-size: 14px;
+        .capability h3 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: #111827;
         }
 
+        .capability p {
+            color: #6b7280;
+            font-size: 0.93rem;
+        }
 
-        /* =========================================================
-           PROJETOS
-        ========================================================= */
+        /* =========================
+           PROBLEMAS
+        ========================= */
 
-        .projects {
+        .problems {
+            background: white;
+        }
+
+        .problem-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
+            gap: 20px;
+        }
+
+        .problem {
+            padding: 28px;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            background: #ffffff;
+        }
+
+        .problem h3 {
+            color: #111827;
+            margin-bottom: 9px;
+            font-size: 1.12rem;
+        }
+
+        .problem p {
+            color: #6b7280;
+        }
+
+        /* =========================
+           PROJETOS
+        ========================= */
+
+        .projects {
+            background: #f7f9fc;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
         }
 
         .project {
             background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 14px;
-            padding: 32px;
-
-            transition: 0.25s;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
         }
 
-        .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 14px 35px rgba(15,23,42,0.08);
-            border-color: #bfdbfe;
-        }
-
-        .project-number {
+        .project-category {
+            font-size: 0.75rem;
             color: #2563eb;
-            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
             font-weight: 800;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .project h3 {
-            font-size: 23px;
-            color: #0f172a;
-            margin-bottom: 13px;
+            font-size: 1.35rem;
+            color: #111827;
+            margin-bottom: 15px;
         }
 
         .project p {
-            color: #64748b;
-            margin-bottom: 22px;
+            color: #6b7280;
+            margin-bottom: 17px;
         }
 
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 7px;
+        .project strong {
+            color: #374151;
         }
 
-        .tag {
-            background: #eff6ff;
-            color: #1d4ed8;
-
-            padding: 5px 10px;
-            border-radius: 20px;
-
-            font-size: 12px;
-            font-weight: 600;
+        .project-tech {
+            margin-top: auto;
+            padding-top: 18px;
+            font-size: 0.82rem;
+            color: #6b7280;
         }
 
+        .project-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #2563eb;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
 
-        /* =========================================================
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
            PESQUISA
-        ========================================================= */
+        ========================= */
 
         .research {
-            background: #f1f5f9;
+            background: white;
         }
 
         .research-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
+            gap: 20px;
         }
 
         .research-card {
-            background: white;
-            padding: 30px;
-            border-radius: 13px;
-            border: 1px solid #e2e8f0;
+            border-top: 3px solid #2563eb;
+            padding: 25px;
+            background: #f7f9fc;
         }
 
         .research-card h3 {
-            color: #0f172a;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
+            color: #111827;
         }
 
         .research-card p {
-            color: #64748b;
-            font-size: 15px;
+            color: #6b7280;
+            font-size: 0.93rem;
         }
 
+        /* =========================
+           TECNOLOGIAS
+        ========================= */
 
-        /* =========================================================
-           FORMAÇÃO
-        ========================================================= */
-
-        .education-list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
+        .skills {
+            background: #f7f9fc;
         }
 
-        .education-item {
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
             background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 25px;
+            border: 1px solid #dfe3e8;
+            padding: 9px 14px;
+            border-radius: 7px;
+            font-size: 0.9rem;
+            color: #374151;
+            font-weight: 600;
         }
 
-        .education-item strong {
-            display: block;
-            font-size: 17px;
-            color: #0f172a;
-            margin-bottom: 5px;
+        /* =========================
+           TRAJETÓRIA
+        ========================= */
+
+        .timeline {
+            background: white;
         }
 
-        .education-item span {
-            color: #64748b;
-            font-size: 14px;
+        .timeline-list {
+            max-width: 850px;
+            margin: 0 auto;
+            position: relative;
         }
 
+        .timeline-item {
+            position: relative;
+            padding: 0 0 38px 35px;
+            border-left: 2px solid #dbe4f0;
+        }
 
-        /* =========================================================
+        .timeline-item:last-child {
+            border-left: 2px solid transparent;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -7px;
+            top: 2px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #2563eb;
+        }
+
+        .timeline-item h3 {
+            color: #111827;
+            margin-bottom: 4px;
+        }
+
+        .timeline-item span {
+            font-size: 0.85rem;
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+        .timeline-item p {
+            margin-top: 8px;
+            color: #6b7280;
+        }
+
+        /* =========================
            CONTATO
-        ========================================================= */
+        ========================= */
 
         .contact {
-            background: #0f172a;
+            background: #111827;
             color: white;
+            text-align: center;
+        }
+
+        .contact .section-label {
+            color: #93c5fd;
         }
 
         .contact h2 {
             color: white;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 16px;
         }
 
         .contact p {
-            max-width: 700px;
             color: #cbd5e1;
-            font-size: 17px;
-            margin-bottom: 25px;
+            max-width: 650px;
+            margin: 0 auto 30px;
         }
 
         .contact-links {
             display: flex;
-            gap: 15px;
+            justify-content: center;
             flex-wrap: wrap;
+            gap: 12px;
         }
 
         .contact-link {
-            display: inline-block;
-
-            padding: 12px 18px;
-
-            border: 1px solid #334155;
+            padding: 11px 18px;
+            border: 1px solid #4b5563;
             border-radius: 8px;
-
-            color: #dbeafe;
+            color: #e5e7eb;
             font-weight: 600;
-
-            transition: 0.2s;
         }
 
         .contact-link:hover {
-            background: #1e293b;
+            border-color: #93c5fd;
+            color: #93c5fd;
         }
 
-
-        /* =========================================================
+        /* =========================
            FOOTER
-        ========================================================= */
+        ========================= */
 
         footer {
-            background: #020617;
-            color: #64748b;
+            background: #0b1120;
+            color: #9ca3af;
             text-align: center;
-            padding: 25px 20px;
-            font-size: 13px;
+            padding: 25px;
+            font-size: 0.82rem;
         }
 
-
-        /* =========================================================
-           RESPONSIVIDADE
-        ========================================================= */
+        /* =========================
+           RESPONSIVO
+        ========================= */
 
         @media (max-width: 900px) {
 
@@ -512,300 +607,246 @@
                 grid-template-columns: 1fr;
             }
 
-            .hero-side {
-                border-left: none;
-                border-top: 1px solid rgba(255,255,255,0.18);
-                padding-left: 0;
-                padding-top: 30px;
-            }
-
-            .skills-grid {
+            .capability-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
             .research-grid {
                 grid-template-columns: 1fr;
             }
-        }
-
-
-        @media (max-width: 700px) {
-
-            .nav-content {
-                padding: 14px 0;
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .nav-links {
-                gap: 14px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
 
             .hero {
-                padding: 75px 0;
+                padding-top: 75px;
             }
+        }
 
-            .hero h1 {
-                letter-spacing: -1px;
-            }
+        @media (max-width: 650px) {
 
-            .projects,
-            .education-list,
-            .skills-grid {
-                grid-template-columns: 1fr;
+            .nav-links {
+                display: none;
             }
 
             section {
                 padding: 65px 0;
             }
-        }
 
+            .capability-grid,
+            .problem-grid,
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-card {
+                padding: 23px;
+            }
+        }
     </style>
 </head>
 
-
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
 
-<!-- =========================================================
-     NAVEGAÇÃO
-========================================================= -->
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">Guilherme F. Inocente</div>
 
-<nav>
-
-    <div class="container nav-content">
-
-        <a href="#" class="logo">
-            GFI
-        </a>
-
-        <ul class="nav-links">
-
-            <li>
-                <a href="#sobre">Sobre</a>
-            </li>
-
-            <li>
-                <a href="#competencias">Competências</a>
-            </li>
-
-            <li>
-                <a href="#projetos">Projetos</a>
-            </li>
-
-            <li>
-                <a href="#pesquisa">Pesquisa</a>
-            </li>
-
-            <li>
-                <a href="#formacao">Formação</a>
-            </li>
-
-            <li>
-                <a href="#contato">Contato</a>
-            </li>
-
-        </ul>
-
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#atuacao">Atuação</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#pesquisa">Pesquisa</a></li>
+                <li><a href="#trajetoria">Trajetória</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </div>
-
-</nav>
-
+</header>
 
 
-<!-- =========================================================
+<!-- =========================
      HERO
-========================================================= -->
+========================= -->
 
-<header class="hero">
-
+<section class="hero">
     <div class="container hero-grid">
 
         <div>
 
-            <span class="eyebrow">
-                CIÊNCIA · DADOS · TECNOLOGIA · EDUCAÇÃO
-            </span>
+            <div class="eyebrow">
+                PESQUISA APLICADA • DADOS • MODELAGEM COMPUTACIONAL
+            </div>
 
             <h1>
-                Guilherme Franco Inocente
+                Guilherme Franco <span>Inocente</span>
             </h1>
 
             <h2>
-                Físico, pesquisador e profissional em transição para
-                Ciência de Dados e Inteligência Artificial.
+                Doutor em Biofísica com experiência em modelagem computacional,
+                análise de dados e desenvolvimento de soluções baseadas em dados.
             </h2>
 
             <p class="hero-description">
-
-                Doutor em Biofísica, com formação em Física Médica e Matemática,
-                experiência em modelagem computacional, pesquisa científica,
-                análise de dados e educação. Atualmente ampliando essa trajetória
-                com formação em Engenharia de Dados e aplicações de IA.
-
+                Transformo problemas complexos em modelos, análises e soluções
+                baseadas em evidências, conectando ciência, tecnologia,
+                dados e educação.
             </p>
 
-            <div class="hero-buttons">
+            <div class="keywords">
+                Ciência • Dados • Tecnologia • Educação
+            </div>
 
-                <a
-                    href="#projetos"
-                    class="button button-primary"
-                >
-                    Conheça meus projetos
+            <div class="hero-buttons">
+                <a class="btn btn-primary"
+                   href="#projetos">
+                    Ver projetos
                 </a>
 
-                <a
-                    href="https://github.com/gfinocente"
-                    target="_blank"
-                    class="button button-secondary"
-                >
+                <a class="btn btn-secondary"
+                   href="https://www.linkedin.com/"
+                   target="_blank">
+                    LinkedIn
+                </a>
+
+                <a class="btn btn-secondary"
+                   href="https://github.com/gfinocente"
+                   target="_blank">
                     GitHub
                 </a>
-
             </div>
 
         </div>
 
 
-        <div class="hero-side">
+        <div class="hero-card">
 
-            <p>
-                <strong>Doutor em Biofísica</strong>
-                UNESP · 2023
-            </p>
+            <div class="hero-card-title">
+                Áreas de atuação
+            </div>
 
-            <p>
-                <strong>Física Médica</strong>
-                Modelagem e simulação computacional
-            </p>
-
-            <p>
-                <strong>Dados & IA</strong>
-                Python · SQL · Power BI · Machine Learning
-            </p>
-
-            <p>
-                <strong>Engenharia de Dados</strong>
-                Pós-graduação em andamento
-            </p>
+            <ul>
+                <li>Pesquisa & Desenvolvimento</li>
+                <li>Dados & Analytics</li>
+                <li>Modelagem Computacional</li>
+                <li>Pesquisa em Saúde</li>
+                <li>Educação & Tecnologia</li>
+            </ul>
 
         </div>
 
     </div>
-
-</header>
-
+</section>
 
 
-<main>
-
-
-<!-- =========================================================
+<!-- =========================
      SOBRE
-========================================================= -->
+========================= -->
 
-<section id="sobre">
+<section class="about" id="sobre">
 
     <div class="container">
 
-        <div class="section-label">
-            SOBRE
+        <div class="section-header">
+
+            <div class="section-label">
+                Sobre
+            </div>
+
+            <h2>
+                Ciência aplicada a problemas reais.
+            </h2>
+
+            <p>
+                Uma trajetória construída na interseção entre ciência,
+                modelagem, tecnologia, dados e educação.
+            </p>
+
         </div>
 
-        <h2>
-            Uma trajetória entre ciência, tecnologia e educação.
-        </h2>
 
         <div class="about-grid">
 
             <div class="about-text">
 
                 <p>
-                    Minha formação começou na Física e na Física Médica,
-                    avançando para a pesquisa em Biofísica e modelagem
-                    computacional. Durante o doutorado, trabalhei com
-                    simulações Monte Carlo aplicadas à reconstrução de
-                    imagens em tomografia computadorizada por prótons.
+                    Sou Doutor em Biofísica e Físico Médico, com trajetória
+                    acadêmica e profissional voltada à investigação quantitativa,
+                    modelagem matemática e computacional e análise de sistemas
+                    complexos.
                 </p>
 
                 <p>
-                    Ao longo da carreira, também desenvolvi experiência
-                    em ensino, produção de materiais, resolução de problemas
-                    complexos e comunicação de conceitos científicos para
-                    diferentes públicos.
+                    Durante minha formação e atuação em pesquisa, desenvolvi
+                    modelos computacionais e utilizei métodos de simulação
+                    Monte Carlo para investigar problemas relacionados à
+                    Física Médica e à reconstrução de imagens.
                 </p>
 
                 <p>
-                    Atualmente, estou ampliando essa experiência para a área
-                    de dados e inteligência artificial, utilizando Python,
-                    análise de dados, visualização e ferramentas de BI, além
-                    de uma pós-graduação em Engenharia de Dados em andamento.
+                    Paralelamente, minha experiência em educação ampliou minha
+                    atuação com análise de dados educacionais, tecnologias
+                    digitais, modelagem matemática e desenvolvimento de
+                    soluções para problemas de aprendizagem.
                 </p>
 
                 <p>
-                    Meu interesse está na interseção entre
-                    <strong>ciência, modelagem, dados, inteligência artificial,
-                    saúde e educação</strong>.
+                    Atualmente, amplio essa trajetória para Dados, Analytics,
+                    Engenharia de Dados e Inteligência Artificial, mantendo
+                    como eixo central a capacidade de transformar problemas
+                    complexos em análises estruturadas e soluções quantitativas.
                 </p>
+
+                <div class="about-highlight">
+                    Meu diferencial está na combinação entre raciocínio
+                    científico, modelagem, dados e capacidade de traduzir
+                    problemas complexos em soluções compreensíveis e aplicáveis.
+                </div>
 
             </div>
 
 
-            <div class="about-highlight">
+            <div>
 
-                <h3>
-                    Formação em destaque
-                </h3>
+                <ul class="education-list">
 
-                <div class="timeline-item">
+                    <li>
+                        <strong>Doutorado em Biofísica</strong>
+                        <span>UNESP — 2023</span>
+                    </li>
 
-                    <strong>
-                        Doutorado em Biofísica
-                    </strong>
+                    <li>
+                        <strong>Mestrado em Biologia Geral e Aplicada</strong>
+                        <span>UNESP — 2012</span>
+                    </li>
 
-                    <span>
-                        UNESP · 2023
-                    </span>
+                    <li>
+                        <strong>Bacharelado em Física Médica</strong>
+                        <span>UNESP — 2009</span>
+                    </li>
 
-                </div>
+                    <li>
+                        <strong>Licenciatura em Física</strong>
+                        <span>Formação docente</span>
+                    </li>
 
-                <div class="timeline-item">
+                    <li>
+                        <strong>Licenciatura em Matemática</strong>
+                        <span>Formação complementar</span>
+                    </li>
 
-                    <strong>
-                        Mestrado em Biologia Geral e Aplicada
-                    </strong>
+                    <li>
+                        <strong>MBA em Modelagem e Gestão de Processos</strong>
+                        <span>Modelagem e processos</span>
+                    </li>
 
-                    <span>
-                        UNESP · 2012
-                    </span>
-
-                </div>
-
-                <div class="timeline-item">
-
-                    <strong>
-                        Bacharelado em Física Médica
-                    </strong>
-
-                    <span>
-                        UNESP · 2009
-                    </span>
-
-                </div>
-
-                <div class="timeline-item">
-
-                    <strong>
-                        Pós-graduação em Engenharia de Dados
-                    </strong>
-
-                    <span>
-                        Em andamento
-                    </span>
-
-                </div>
+                </ul>
 
             </div>
 
@@ -816,141 +857,88 @@
 </section>
 
 
+<!-- =========================
+     O QUE EU FAÇO
+========================= -->
 
-<!-- =========================================================
-     COMPETÊNCIAS
-========================================================= -->
-
-<section id="competencias">
+<section class="capabilities" id="atuacao">
 
     <div class="container">
 
-        <div class="section-label">
-            COMPETÊNCIAS
+        <div class="section-header">
+
+            <div class="section-label">
+                Atuação
+            </div>
+
+            <h2>
+                O que eu faço
+            </h2>
+
+            <p>
+                Quatro frentes que representam a combinação de competências
+                desenvolvida ao longo da minha trajetória.
+            </p>
+
         </div>
 
-        <h2>
-            Ferramentas e áreas de atuação
-        </h2>
 
-        <p class="section-intro">
+        <div class="capability-grid">
 
-            Uma combinação de formação científica, raciocínio quantitativo,
-            programação, análise de dados e experiência educacional.
+            <div class="capability">
 
-        </p>
+                <div class="capability-number">01</div>
 
-
-        <div class="skills-grid">
-
-
-            <div class="skill-card">
-
-                <h3>
-                    🧮 Modelagem
-                </h3>
+                <h3>Dados & Analytics</h3>
 
                 <p>
-                    Modelagem matemática, simulação numérica,
-                    métodos computacionais e resolução de problemas.
+                    Estruturação, tratamento, análise e visualização de dados
+                    para transformar informação em evidências para tomada
+                    de decisão.
                 </p>
 
             </div>
 
 
-            <div class="skill-card">
+            <div class="capability">
 
-                <h3>
-                    🐍 Python
-                </h3>
+                <div class="capability-number">02</div>
+
+                <h3>Modelagem Computacional</h3>
 
                 <p>
-                    Pandas, NumPy, Matplotlib e desenvolvimento
-                    de análises e aplicações com dados.
+                    Desenvolvimento e aplicação de modelos matemáticos e
+                    computacionais para representar, simular e analisar
+                    sistemas complexos.
                 </p>
 
             </div>
 
 
-            <div class="skill-card">
+            <div class="capability">
 
-                <h3>
-                    📊 Dados
-                </h3>
+                <div class="capability-number">03</div>
+
+                <h3>Pesquisa Aplicada</h3>
 
                 <p>
-                    Análise exploratória, tratamento de dados,
-                    visualização, Power BI, DAX e SQL.
+                    Investigação científica, revisão de literatura, análise
+                    quantitativa, desenvolvimento metodológico e comunicação
+                    de resultados.
                 </p>
 
             </div>
 
 
-            <div class="skill-card">
+            <div class="capability">
 
-                <h3>
-                    🤖 IA
-                </h3>
+                <div class="capability-number">04</div>
 
-                <p>
-                    Machine Learning, inteligência artificial e
-                    investigação de aplicações de IA em problemas reais.
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>
-                    🔬 Pesquisa
-                </h3>
+                <h3>Educação & Tecnologia</h3>
 
                 <p>
-                    Pesquisa científica, revisão bibliográfica,
-                    análise quantitativa e produção acadêmica.
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>
-                    ⚛️ Física Médica
-                </h3>
-
-                <p>
-                    Interação da radiação com a matéria,
-                    Monte Carlo, protonterapia e reconstrução de imagens.
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>
-                    📚 Educação
-                </h3>
-
-                <p>
-                    Ensino de Física e Matemática, tecnologias educacionais,
-                    aprendizagem baseada em dados e produção de materiais.
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>
-                    🗄️ Engenharia de Dados
-                </h3>
-
-                <p>
-                    Formação em andamento com foco em pipelines,
-                    bancos de dados e infraestrutura para dados.
+                    Desenvolvimento de soluções educacionais utilizando
+                    dados, modelagem matemática e tecnologias digitais.
                 </p>
 
             </div>
@@ -962,38 +950,132 @@
 </section>
 
 
+<!-- =========================
+     PROBLEMAS QUE RESOLVO
+========================= -->
 
-<!-- =========================================================
+<section class="problems">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Abordagem
+            </div>
+
+            <h2>
+                Problemas complexos exigem mais do que ferramentas.
+            </h2>
+
+            <p>
+                Minha abordagem começa pelo problema, não pela tecnologia.
+            </p>
+
+        </div>
+
+
+        <div class="problem-grid">
+
+            <div class="problem">
+
+                <h3>
+                    Dados → decisão
+                </h3>
+
+                <p>
+                    Organizo e analiso dados para identificar padrões,
+                    indicadores e evidências capazes de apoiar decisões.
+                </p>
+
+            </div>
+
+
+            <div class="problem">
+
+                <h3>
+                    Problemas → modelos
+                </h3>
+
+                <p>
+                    Transformo problemas científicos ou operacionais em
+                    modelos quantitativos que podem ser analisados,
+                    testados e aprimorados.
+                </p>
+
+            </div>
+
+
+            <div class="problem">
+
+                <h3>
+                    Pesquisa → evidências
+                </h3>
+
+                <p>
+                    Estruturo processos de investigação desde a pergunta
+                    inicial até a análise e comunicação dos resultados.
+                </p>
+
+            </div>
+
+
+            <div class="problem">
+
+                <h3>
+                    Educação → soluções
+                </h3>
+
+                <p>
+                    Utilizo dados, matemática e tecnologia para compreender
+                    problemas educacionais e construir intervenções baseadas
+                    em evidências.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
      PROJETOS
-========================================================= -->
+========================= -->
 
-<section id="projetos">
+<section class="projects" id="projetos">
 
     <div class="container">
 
-        <div class="section-label">
-            PORTFÓLIO
+        <div class="section-header">
+
+            <div class="section-label">
+                Projetos
+            </div>
+
+            <h2>
+                Projetos em destaque
+            </h2>
+
+            <p>
+                Alguns projetos que demonstram como aplico ciência,
+                modelagem e dados a problemas concretos.
+            </p>
+
         </div>
 
-        <h2>
-            Projetos e aplicações
-        </h2>
 
-        <p class="section-intro">
-
-            Projetos que mostram como utilizo conhecimento científico,
-            dados e tecnologia para investigar problemas e construir soluções.
-
-        </p>
+        <div class="project-grid">
 
 
-        <div class="projects">
-
+            <!-- SARESP -->
 
             <article class="project">
 
-                <div class="project-number">
-                    CASE 01 · DATA & EDUCATION
+                <div class="project-category">
+                    Learning Analytics • Educação
                 </div>
 
                 <h3>
@@ -1001,178 +1083,147 @@
                 </h3>
 
                 <p>
-
-                    Tratamento e análise de dados educacionais reais,
-                    utilizando Python e Power BI para transformar resultados
-                    de avaliações em informações úteis para interpretação
-                    pedagógica e tomada de decisão.
-
+                    <strong>Problema:</strong>
+                    como transformar resultados de avaliações educacionais
+                    em informações úteis para a tomada de decisão pedagógica?
                 </p>
 
-                <div class="tags">
+                <p>
+                    <strong>Solução:</strong>
+                    tratamento e anonimização dos dados com Python,
+                    análise quantitativa e construção de indicadores
+                    e visualizações em Power BI.
+                </p>
 
-                    <span class="tag">Python</span>
-                    <span class="tag">Pandas</span>
-                    <span class="tag">Power BI</span>
-                    <span class="tag">DAX</span>
-                    <span class="tag">Learning Analytics</span>
+                <p>
+                    <strong>Resultado:</strong>
+                    estrutura de análise para interpretação do desempenho
+                    dos estudantes e identificação de padrões relevantes.
+                </p>
 
+                <div class="project-tech">
+                    Python • Pandas • Power BI • Data Analysis
                 </div>
+
+                <a class="project-link"
+                   href="https://github.com/gfinocente"
+                   target="_blank">
+                    Ver projeto no GitHub →
+                </a>
 
             </article>
 
 
+            <!-- MONTE CARLO -->
 
             <article class="project">
 
-                <div class="project-number">
-                    CASE 02 · COMPUTATIONAL PHYSICS
+                <div class="project-category">
+                    Física Médica • Pesquisa
                 </div>
 
                 <h3>
-                    Monte Carlo & Protonterapia
+                    Modelagem Monte Carlo — Protonterapia
                 </h3>
 
                 <p>
-
-                    Pesquisa envolvendo simulação Monte Carlo,
-                    transporte de partículas e problemas relacionados
-                    à reconstrução de imagens e protonterapia.
-
+                    <strong>Problema:</strong>
+                    representar computacionalmente o transporte de partículas
+                    e suas interações com diferentes materiais.
                 </p>
 
-                <div class="tags">
+                <p>
+                    <strong>Solução:</strong>
+                    desenvolvimento de modelos computacionais e utilização
+                    de simulações Monte Carlo para investigação quantitativa.
+                </p>
 
-                    <span class="tag">Monte Carlo</span>
-                    <span class="tag">Física Médica</span>
-                    <span class="tag">Simulação</span>
-                    <span class="tag">Modelagem</span>
+                <p>
+                    <strong>Resultado:</strong>
+                    produção de resultados científicos relacionados à pesquisa
+                    em Física Médica e protonterapia.
+                </p>
 
+                <div class="project-tech">
+                    Monte Carlo • Física Médica • Modelagem Computacional
                 </div>
 
             </article>
 
 
+            <!-- OLIST -->
 
             <article class="project">
 
-                <div class="project-number">
-                    CASE 03 · DATA ANALYTICS
+                <div class="project-category">
+                    Data Analytics
                 </div>
 
                 <h3>
-                    Olist — E-commerce Analytics
+                    Olist — Análise de Dados
                 </h3>
 
                 <p>
-
-                    Projeto de análise de dados de comércio eletrônico,
-                    explorando indicadores, comportamento dos dados e
-                    geração de insights por meio de ferramentas analíticas.
-
+                    Análise exploratória de dados de operações de comércio
+                    eletrônico, buscando compreender padrões de vendas,
+                    comportamento e desempenho operacional.
                 </p>
 
-                <div class="tags">
+                <p>
+                    O projeto utiliza análise de dados para transformar
+                    diferentes conjuntos de informações em indicadores
+                    capazes de apoiar interpretações sobre o negócio.
+                </p>
 
-                    <span class="tag">Python</span>
-                    <span class="tag">Pandas</span>
-                    <span class="tag">Data Analysis</span>
-                    <span class="tag">Visualization</span>
-
+                <div class="project-tech">
+                    Python • Pandas • NumPy • Visualização de Dados
                 </div>
+
+                <a class="project-link"
+                   href="https://github.com/gfinocente"
+                   target="_blank">
+                    Ver projetos no GitHub →
+                </a>
 
             </article>
 
 
+            <!-- AGRO -->
 
             <article class="project">
 
-                <div class="project-number">
-                    CASE 04 · DATA ANALYTICS
+                <div class="project-category">
+                    Data Analytics • Modelagem
                 </div>
 
                 <h3>
-                    Agro Productivity Analysis
+                    Análise de Produtividade Agrícola
                 </h3>
 
                 <p>
-
-                    Análise exploratória e visualização de dados
-                    relacionados à produtividade agrícola, utilizando
-                    programação e técnicas de análise quantitativa.
-
+                    Exploração e análise de dados relacionados à produtividade
+                    agrícola, utilizando métodos quantitativos para identificar
+                    padrões e relações entre variáveis.
                 </p>
-
-                <div class="tags">
-
-                    <span class="tag">Python</span>
-                    <span class="tag">Pandas</span>
-                    <span class="tag">Dados</span>
-
-                </div>
-
-            </article>
-
-
-
-            <article class="project">
-
-                <div class="project-number">
-                    CASE 05 · MATHEMATICS & EDUCATION
-                </div>
-
-                <h3>
-                    Matemática aplicada a problemas reais
-                </h3>
 
                 <p>
-
-                    Desenvolvimento de atividades de ensino envolvendo
-                    geometria espacial, modelagem, funções, juros e
-                    educação financeira utilizando tecnologias digitais.
-
+                    O projeto demonstra a aplicação de ferramentas de análise
+                    de dados a um domínio diferente da pesquisa científica
+                    e da educação.
                 </p>
 
-                <div class="tags">
-
-                    <span class="tag">Matemática</span>
-                    <span class="tag">Modelagem</span>
-                    <span class="tag">Educação</span>
-                    <span class="tag">Tecnologia</span>
-
+                <div class="project-tech">
+                    Python • Pandas • Análise Exploratória • Visualização
                 </div>
+
+                <a class="project-link"
+                   href="https://github.com/gfinocente"
+                   target="_blank">
+                    Ver no GitHub →
+                </a>
 
             </article>
 
-
-
-            <article class="project">
-
-                <div class="project-number">
-                    CASE 06 · ARTIFICIAL INTELLIGENCE
-                </div>
-
-                <h3>
-                    IA aplicada a problemas científicos
-                </h3>
-
-                <p>
-
-                    Desenvolvimento de uma linha de investigação voltada
-                    à utilização de inteligência artificial e análise de
-                    dados em problemas científicos, educacionais e de saúde.
-
-                </p>
-
-                <div class="tags">
-
-                    <span class="tag">Artificial Intelligence</span>
-                    <span class="tag">Machine Learning</span>
-                    <span class="tag">Data Science</span>
-
-                </div>
-
-            </article>
 
         </div>
 
@@ -1181,33 +1232,33 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =========================
      PESQUISA
-========================================================= -->
+========================= -->
 
-<section id="pesquisa" class="research">
+<section class="research" id="pesquisa">
 
     <div class="container">
 
-        <div class="section-label">
-            PESQUISA
+        <div class="section-header">
+
+            <div class="section-label">
+                Pesquisa
+            </div>
+
+            <h2>
+                Pesquisa e produção científica
+            </h2>
+
+            <p>
+                A pesquisa científica continua sendo uma parte central da
+                minha atuação profissional.
+            </p>
+
         </div>
-
-        <h2>
-            Pesquisa científica
-        </h2>
-
-        <p class="section-intro">
-
-            Minha experiência científica fornece a base para a abordagem
-            quantitativa e computacional que aplico atualmente em dados e IA.
-
-        </p>
 
 
         <div class="research-grid">
-
 
             <div class="research-card">
 
@@ -1216,11 +1267,9 @@
                 </h3>
 
                 <p>
-
-                    Formação e pesquisa em Física Médica,
-                    com interesse em aplicações da física
-                    às ciências da saúde.
-
+                    Modelagem computacional, simulações Monte Carlo,
+                    transporte de partículas e aplicações relacionadas
+                    à protonterapia.
                 </p>
 
             </div>
@@ -1229,64 +1278,12 @@
             <div class="research-card">
 
                 <h3>
-                    Modelagem Computacional
+                    Biofísica
                 </h3>
 
                 <p>
-
-                    Simulações Monte Carlo, transporte de partículas,
-                    modelagem numérica e reconstrução computacional.
-
-                </p>
-
-            </div>
-
-
-            <div class="research-card">
-
-                <h3>
-                    Proton Computed Tomography
-                </h3>
-
-                <p>
-
-                    Pesquisa de doutorado relacionada à reconstrução
-                    de imagens utilizando tomografia computadorizada
-                    por prótons.
-
-                </p>
-
-            </div>
-
-
-            <div class="research-card">
-
-                <h3>
-                    Inteligência Artificial
-                </h3>
-
-                <p>
-
-                    Investigação de aplicações de IA e aprendizado de
-                    máquina em problemas científicos, educacionais e
-                    relacionados à saúde.
-
-                </p>
-
-            </div>
-
-
-            <div class="research-card">
-
-                <h3>
-                    Ciência de Dados
-                </h3>
-
-                <p>
-
-                    Análise, tratamento, visualização e interpretação
-                    de dados para apoiar investigação e tomada de decisão.
-
+                    Formação interdisciplinar envolvendo Física, Biologia,
+                    modelagem quantitativa e análise de sistemas biológicos.
                 </p>
 
             </div>
@@ -1299,11 +1296,8 @@
                 </h3>
 
                 <p>
-
-                    Uso de dados educacionais e ferramentas analíticas
-                    para compreender resultados de aprendizagem e apoiar
-                    decisões pedagógicas.
-
+                    Análise de desempenho, modelagem matemática, tecnologias
+                    digitais e desenvolvimento de experiências educacionais.
                 </p>
 
             </div>
@@ -1315,108 +1309,188 @@
 </section>
 
 
+<!-- =========================
+     TECNOLOGIAS
+========================= -->
 
-<!-- =========================================================
-     FORMAÇÃO
-========================================================= -->
-
-<section id="formacao">
+<section class="skills">
 
     <div class="container">
 
-        <div class="section-label">
-            FORMAÇÃO
+        <div class="section-header">
+
+            <div class="section-label">
+                Ferramentas
+            </div>
+
+            <h2>
+                Tecnologias e métodos
+            </h2>
+
+            <p>
+                Ferramentas utilizadas em projetos de análise, modelagem,
+                pesquisa e desenvolvimento.
+            </p>
+
         </div>
 
-        <h2>
-            Formação acadêmica
-        </h2>
 
-        <p class="section-intro">
+        <div class="skills-container">
 
-            Uma formação interdisciplinar construída entre Física,
-            Saúde, Matemática, Biofísica e Dados.
+            <span class="skill">Python</span>
+            <span class="skill">Pandas</span>
+            <span class="skill">NumPy</span>
+            <span class="skill">Matplotlib</span>
+            <span class="skill">Power BI</span>
+            <span class="skill">DAX</span>
+            <span class="skill">Power Query</span>
+            <span class="skill">SQL</span>
+            <span class="skill">PostgreSQL</span>
+            <span class="skill">Git</span>
+            <span class="skill">GitHub</span>
+            <span class="skill">Streamlit</span>
+            <span class="skill">Monte Carlo</span>
+            <span class="skill">Modelagem Matemática</span>
+            <span class="skill">Análise Estatística</span>
+            <span class="skill">Visualização de Dados</span>
+            <span class="skill">Learning Analytics</span>
+            <span class="skill">Pesquisa Científica</span>
 
-        </p>
+        </div>
+
+    </div>
+
+</section>
 
 
-        <div class="education-list">
+<!-- =========================
+     TRAJETÓRIA
+========================= -->
+
+<section class="timeline" id="trajetoria">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Trajetória
+            </div>
+
+            <h2>
+                Uma trajetória interdisciplinar
+            </h2>
+
+            <p>
+                Diferentes etapas da carreira contribuíram para construir
+                uma mesma competência: compreender problemas complexos
+                e trabalhar com eles de forma quantitativa.
+            </p>
+
+        </div>
 
 
-            <div class="education-item">
+        <div class="timeline-list">
 
-                <strong>
-                    Doutorado em Biofísica
-                </strong>
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <h3>
+                    Física Médica
+                </h3>
 
                 <span>
-                    UNESP · 2023
+                    Formação científica
                 </span>
+
+                <p>
+                    Formação em Física Médica, com base sólida em Física,
+                    matemática, instrumentação e aplicações na saúde.
+                </p>
 
             </div>
 
 
-            <div class="education-item">
+            <div class="timeline-item">
 
-                <strong>
-                    Mestrado em Biologia Geral e Aplicada
-                </strong>
+                <div class="timeline-dot"></div>
+
+                <h3>
+                    Mestrado e Doutorado
+                </h3>
 
                 <span>
-                    UNESP · 2012
+                    Pesquisa interdisciplinar
                 </span>
+
+                <p>
+                    Desenvolvimento de pesquisa científica em Biologia,
+                    Biofísica, modelagem e métodos computacionais.
+                </p>
 
             </div>
 
 
-            <div class="education-item">
+            <div class="timeline-item">
 
-                <strong>
-                    Bacharelado em Física Médica
-                </strong>
+                <div class="timeline-dot"></div>
+
+                <h3>
+                    Pesquisa e Modelagem Computacional
+                </h3>
 
                 <span>
-                    UNESP · 2009
+                    Física Médica • Monte Carlo
                 </span>
+
+                <p>
+                    Aplicação de métodos quantitativos e simulação
+                    computacional a problemas científicos.
+                </p>
 
             </div>
 
 
-            <div class="education-item">
+            <div class="timeline-item">
 
-                <strong>
-                    Licenciatura em Física
-                </strong>
+                <div class="timeline-dot"></div>
+
+                <h3>
+                    Educação e Tecnologia
+                </h3>
 
                 <span>
-                    Formação complementar em ensino de Física
+                    Matemática • Física • Dados educacionais
                 </span>
+
+                <p>
+                    Atuação em diferentes contextos educacionais,
+                    desenvolvimento de materiais, projetos e análise
+                    de dados de aprendizagem.
+                </p>
 
             </div>
 
 
-            <div class="education-item">
+            <div class="timeline-item">
 
-                <strong>
-                    Licenciatura em Matemática
-                </strong>
+                <div class="timeline-dot"></div>
 
-                <span>
-                    Formação complementar em Matemática
-                </span>
-
-            </div>
-
-
-            <div class="education-item">
-
-                <strong>
-                    Pós-graduação em Engenharia de Dados
-                </strong>
+                <h3>
+                    Dados, IA e Pesquisa Aplicada
+                </h3>
 
                 <span>
-                    Em andamento
+                    Nova frente de atuação
                 </span>
+
+                <p>
+                    Expansão das competências para análise de dados,
+                    engenharia de dados e inteligência artificial,
+                    conectando experiência científica a problemas
+                    contemporâneos.
+                </p>
 
             </div>
 
@@ -1427,17 +1501,16 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =========================
      CONTATO
-========================================================= -->
+========================= -->
 
-<section id="contato" class="contact">
+<section class="contact" id="contato">
 
     <div class="container">
 
         <div class="section-label">
-            CONTATO
+            Contato
         </div>
 
         <h2>
@@ -1445,22 +1518,29 @@
         </h2>
 
         <p>
-
-            Estou interessado em oportunidades que conectem ciência,
-            tecnologia, dados, inteligência artificial, pesquisa aplicada,
+            Estou aberto a oportunidades em pesquisa aplicada,
+            ciência de dados, modelagem computacional, tecnologia,
             saúde e educação.
-
         </p>
 
 
         <div class="contact-links">
 
-            <a
-                href="https://github.com/gfinocente"
-                target="_blank"
-                class="contact-link"
-            >
+            <a class="contact-link"
+               href="https://www.linkedin.com/in/guilherme-inocente-50690714b"
+               target="_blank">
+                LinkedIn
+            </a>
+
+            <a class="contact-link"
+               href="https://github.com/gfinocente"
+               target="_blank">
                 GitHub
+            </a>
+
+            <a class="contact-link"
+               href="mailto:gfinocente@gmail.com">
+                E-mail
             </a>
 
         </div>
@@ -1470,20 +1550,15 @@
 </section>
 
 
-</main>
-
-
-
-<!-- =========================================================
+<!-- =========================
      FOOTER
-========================================================= -->
+========================= -->
 
 <footer>
 
-    Guilherme Franco Inocente · Ciência · Dados · IA · Pesquisa
+    © 2026 Guilherme Franco Inocente · Pesquisa • Dados • Modelagem • Tecnologia
 
 </footer>
-
 
 </body>
 </html>
